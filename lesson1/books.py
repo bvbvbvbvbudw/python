@@ -39,7 +39,7 @@ class Library:
         return result if result else f"books in genre {genre} not found."
 
     def sort_books_by_year(self):
-        return sorted(self.books, key=lambda book: book.year)
+        return sorted(self.books, key=lambda book: book.year) # lambda - бо в key треба фнк, lambda це анонім фнк просто повератає book.year
 
     def sort_books_by_title(self):
         return sorted(self.books, key=lambda book: book.title)
