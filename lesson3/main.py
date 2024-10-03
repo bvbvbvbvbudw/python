@@ -15,7 +15,7 @@ def pressure_sensor():
         time.sleep(1)
 
 def sensor_handler(func): # приймає фнк яку потрібно декорувати
-    def wrapper(self, sensor_func, *args, **kwargs): # викликається ця фнк. Приймає (об'єкт, фнк типу temp_sensor(), та інші)
+    def wrapper(self, sensor_func): # викликається ця фнк. Приймає (об'єкт, фнк типу temp_sensor())
         for data in sensor_func():
             func(self, data) # отримує дані які генеруються
     return wrapper # повертає
